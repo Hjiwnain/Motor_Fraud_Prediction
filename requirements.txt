@@ -3,4 +3,5 @@ pickle
 numpy
 PIL
 plotly
+cufflinks
 sckit-learn
