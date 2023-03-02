@@ -1,0 +1,6 @@
+streamlit
+pickle
+numpy
+PIL
+plotly
+sckit-learn
