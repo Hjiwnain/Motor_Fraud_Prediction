@@ -1,6 +1,6 @@
 # pickle
 numpy
-PIL
+# PIL
 plotly==5.11.0
 # cufflinks
 # sckit-learn

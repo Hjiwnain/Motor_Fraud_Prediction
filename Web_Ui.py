@@ -1,7 +1,7 @@
 import streamlit as st
 import pickle
 import numpy as np
-from PIL import Image 
+# from PIL import Image 
 import plotly.graph_objects as go
 
 
