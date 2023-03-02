@@ -3,4 +3,4 @@ numpy
 # PIL
 plotly==5.11.0
 # cufflinks
-# sckit-learn
+sckit-learn
