@@ -2,6 +2,6 @@ streamlit
 pickle
 numpy
 PIL
-plotly
+plotly==5.11.0
 # cufflinks
 # sckit-learn
