@@ -77,18 +77,18 @@ date1, date2 = st.columns(2)
 
 with date1:
     map4_policy_date = st.date_input(
-        'When did you buyed the policy',
+        'Policy Date',
         help='Please select the date when you bought the policy'
     )
     
 with date2:
     map4_accident_date = st.date_input(
-        'When did you met up with accident',
+        'Accident Date',
         help='Please select when you met up with accident'
     )
 
 map4_reporting_date = st.date_input(
-    'When did you reported about accident',
+    'Reported Date',
     help='Please select when you reported about accident'
 )
 
