@@ -29,9 +29,7 @@ with open('Models/Tampered.pkl','rb') as f:
     model9 = pickle.load(f)
 # -------------------------------------------------------------------------------
 
-st.title('Welcome to Iassist Motor Fraud Classifier 🚗')
-
-st.subheader('We are here to help you get the best loan counseling')
+st.title('Welcome to Iassist Motor Fraud Detection 🚗')
 # -------------------------------------------------------------------------------
 
 col1, col2 = st.columns(2)
@@ -128,7 +126,8 @@ if st.button('Check my chances'):
         total_perc += 10.5
     if(model9.predict([temp_li]) == 1):
         total_perc += 8.0
-    print(total_perc)
+    if policacc < 8:
+        total_perc += 100
     fig = go.Figure(go.Indicator(
         domain = {'x': [0, 1], 'y': [0, 1]},
         value = total_perc,
