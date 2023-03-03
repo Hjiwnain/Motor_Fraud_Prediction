@@ -126,7 +126,7 @@ if st.button('Check my chances'):
         total_perc += 10.5
     if(model9.predict([temp_li]) == 1):
         total_perc += 8.0
-    if policacc < 8:
+    if policacc < 8 or (map4_reporting_date - map4_accident_date).days < 0:
         total_perc += (100-total_perc)
     fig = go.Figure(go.Indicator(
         domain = {'x': [0, 1], 'y': [0, 1]},
@@ -135,9 +135,11 @@ if st.button('Check my chances'):
         title = {'text': "Risk Factor"},
         delta = {'reference': 55},
         gauge = {'axis': {'range': [None, 100]},
+                'bar': {'color': "darkblue"},
                 'steps' : [
-                    {'range': [0, 45], 'color': "lightgray"},
-                    {'range': [45, 85], 'color': "gray"}],
+                    {'range': [0, 45], 'color': "green"},
+                    {'range': [45, 85], 'color': "yellow"},
+                    {'range': [85, 100], 'color': "red"}],
                 'threshold' : {'line': {'color': "red", 'width': 4}, 'thickness': 0.75, 'value': 100}}))
     st.plotly_chart(fig, use_container_width=True)
     pass
