@@ -51,7 +51,7 @@ with col2:
 
 
 in_age = st.slider(
-    'Please enter the Age of the car',
+    'Please enter the Age of the vecile',
     0,
     20,
     10,
@@ -127,7 +127,7 @@ if st.button('Check my chances'):
     if(model9.predict([temp_li]) == 1):
         total_perc += 8.0
     if policacc < 8:
-        total_perc += 100
+        total_perc += (100-total_perc)
     fig = go.Figure(go.Indicator(
         domain = {'x': [0, 1], 'y': [0, 1]},
         value = total_perc,
